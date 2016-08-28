@@ -1,0 +1,37 @@
+
+#ana{
+    display: flex;
+    justify-content: center;
+}
+#uye{
+    display: flex;
+    justify-content: center;
+}
+#org{
+    display: flex;
+    justify-content: center;
+}
+#rez{
+    display: flex;
+    justify-content: center;
+}
+#ana:hover{
+    opacity: 0.9;
+    background-color: #1b6d85;
+    cursor:pointer;
+}
+#uye:hover{
+    opacity: 0.9;
+    background-color: #1b6d85;
+    cursor:pointer;
+}
+#org:hover{
+    opacity: 0.9;
+    background-color: #1b6d85;
+    cursor:pointer;
+}
+#rez:hover{
+    opacity: 0.9;
+    background-color: #1b6d85;
+    cursor:pointer;
+}
