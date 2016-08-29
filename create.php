@@ -23,7 +23,7 @@ $conn->query($sql);
   <head>
     <meta charset="utf-8">
     <title>Kaydet</title>
-    <link rel="stylesheet" href="../style/css/bootstrap.css" />
+    <?php include 'importer.php' ?>
   </head>
   <body>
     <div class="container">

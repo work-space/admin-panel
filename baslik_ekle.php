@@ -3,7 +3,13 @@ include 'dbconnect.php';
 if(!empty($_POST)){
 $label=$_POST["label"];
 $link=$_POST["link"];
+$link=$link.'.php';
 $sql="INSERT INTO basliklar (label,link) VALUES ('$label','$link')";
+$myfile=fopen($link.'.php', "w");
+  fwrite($myfile, '<?php include "index.php"; ?>');
+  $txt = "Jane Doe\n";
+  fwrite($myfile, $txt);
+  fclose($myfile);
 $conn->query($sql);
 };
 ?>
@@ -23,7 +29,7 @@ $conn->query($sql);
     <form  enctype="multipart/form-data" action="baslik_ekle.php" method="post">
       <div class="form-group">
       <label>Label</label><input type="text" name="label" class="form-control"><br>
-      <label>Href</label><input type="text" name="link" class="form-control"><br>
+      <label>Href</label><input type="text" name="link" class="form-control"><span class="help-block">.php </span> <br/>
       <button class="form-control" type="submit">Kaydet </button>
     </div>
     </form>
