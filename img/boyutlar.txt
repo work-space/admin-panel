@@ -1,0 +1,4 @@
+iconlar    40*40 px
+slayt görselleri  1178*550  px
+ana sayfa görselleri  400*300 px
+kiþi profilleri  200*200 px
