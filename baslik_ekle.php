@@ -5,12 +5,13 @@ $label=$_POST["label"];
 $link=$_POST["link"];
 $link=$link.'.php';
 $sql="INSERT INTO basliklar (label,link) VALUES ('$label','$link')";
-$myfile=fopen($link.'.php', "w");
+$myfile=fopen($link, "w");
   fwrite($myfile, '<?php include "index.php"; ?>');
-  $txt = "Jane Doe\n";
-  fwrite($myfile, $txt);
   fclose($myfile);
 $conn->query($sql);
+  $page = $_SERVER['PHP_SELF'];
+  $sec = "0";
+  header("Refresh: $sec; url=$page");
 };
 ?>
 <!DOCTYPE html>
