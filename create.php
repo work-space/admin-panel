@@ -80,7 +80,7 @@ echo '
   ';
 include 'header.php';
 echo'
-    <form  enctype="multipart/form-data" action="create.php" method="post" style="margin-top: 70px">
+    <form  enctype="multipart/form-data" action="create.php" method="post" style="margin-top: 10px">
       <div class="row" > ';
         foreach($data as  $foto){
           echo '
