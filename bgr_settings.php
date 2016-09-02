@@ -73,7 +73,7 @@ $conn->query($sql);
     }
       }
   </style>
-    <div class="container" ng-app="appDemo" ng-controller="controllerDemo" style="margin-top: 70px">
+    <div class="container" ng-app="appDemo" ng-controller="controllerDemo" >
       <div class="row">
   <?php  include 'header.php'; ?>
   <div class="col-md-12" style="margin-top:10px;">
