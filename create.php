@@ -76,37 +76,36 @@ echo '
     });
     </script>
     <div class="container" ng-app="slideApp" ng-controller="controllerSlide">
-    
       <div class="row">
   ';
 include 'header.php';
 echo'
-  
-    <form  enctype="multipart/form-data" action="create.php" method="post">
-      <div class="form-group">
-      
-      <div class="container-fluid">
-      ';
+    <form  enctype="multipart/form-data" action="create.php" method="post" style="margin-top: 70px">
+      <div class="row" > ';
         foreach($data as  $foto){
           echo '
-        <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs hidden-sm hidden-md " >
-            <input type="checkbox" value="'.$foto["id"].'" ng-checked="fotos.indexOf('.$foto["id"].')>-1" name="fotos[]" ><img  ng-click="delete('.$foto["id"].')" ng-style="fotos.indexOf('.$foto["id"].')>-1 ? {opacity:0.5} : null" src="'.$foto["src"].'"  height="300" width="550">
+        <div class=" m6 s6 l6">
+            <input type="checkbox" value="'.$foto["id"].'" ng-checked="fotos.indexOf('.$foto["id"].')>-1" name="fotos[]" ><img style="margin-bottom:20px" class="img-responsive hoverable col m6 s6 l6" ng-click="delete('.$foto["id"].')" ng-style="fotos.indexOf('.$foto["id"].')>-1 ? {opacity:0.5,\'transition\':\'0.8s\'} : {\'transition\':\'0.8s\',opacity:1,border:none}" src="'.$foto["src"].'"  >
         </div>
+        ';}
+echo '
+    </div>
+    <div class="row"><button type="submit" name="submit" value="sil" class="btn waves-effect waves-light red push-m3 col m6 push-s3 push-l3 s6 l6" >Sil</button></div>
 
-        ';};
-echo '</div><br>
-<input type="submit" name="submit" value="sil" class="btn btn-danger col-md-push-4 col-md-4 col-sm-push-4 col-sm-4 col-xs-push-4 col-xs-4" />
-<br><br>
         </form>
+        <div class="row">
         <form  enctype="multipart/form-data" action="create.php" method="post">
-        <div class="col-md-push-2 col-md-8 col-xs-8 col-xs-push-2 col-sm-8 col-sm-push-2" style="margin-top:10px">
-      <label>Başlık</label><input type="text" name="baslik" class="form-control"><br>
-      <label>Açıklama</label><input type="text" name="dsc" class="form-control"><br>
-      <label>Dosya</label><input class="form-control" type="file" name="src"><br>
-      <input type="submit" name="submit" value="kaydet" class="btn btn-primary col-md-push-3 col-md-6 col-sm-push-3 col-sm-6 col-xs-push-3 col-xs-6" />
+        <div class="col push-m2 m8 s8 push-s2 l8 push-l2" style="margin-top:10px">
+      <div class="input-field"><label>Başlık</label><input placeholder="Başlık" type="text" name="baslik"></div><br>
+      <div class="input-field"><label>Açıklama</label><input placeholder="Açıklama" type="text" name="dsc" ></div><br>
+      <div class="input-field file-field"><div class="btn">Fotoğraf</div><input class="validate" type="file" name="src"><div class="file-path-wrapper"><input class="file-path validate" type="text"></div></div></<br>
+      <input type="submit" name="submit" value="kaydet" class="btn waves-effect waves-light blue push-m2 col m8 push-s2 push-l2 s8 l8" />
     </div>
     </form>
     </div>
+    ';
+    include 'footer.php';
+    echo '
     </div>
   </div>
   </body>
