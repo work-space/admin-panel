@@ -1,21 +1,30 @@
 <?php
 include 'dbconnect.php';
 $sql="SELECT * FROM `urunler`";
-$result=$conn->query($sql);
-while ($row = mysqli_fetch_assoc($result)) {
+$urun_card=$conn->query($sql);
+while ($row = mysqli_fetch_assoc($urun_card)) {
 
-    echo '<div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="thumbnail">
-              <img src='.$row['resim'].' alt="...">
-              <div class="caption">
-                  <h3>'.$row['etiket'].'</h3>
-                  <p>'.$row['aciklama'].'</p>
-                  <p>
-                    <a href="#" class="btn btn-primary" role="button">DEVAMINI OKU...</a>
-                    <a href="#"class="btn btn-default"role="button">Sonraki.</a>
-                  </p>
-              </div>
-          </div>
-      </div>';
+    echo '
+
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="'.$row['resim'].'">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">'.$row['etiket'].'<i class="material-icons right">more_vert</i></span>
+
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>'.$row['aciklama'].'</p>
+                <p><a href="#header">This is a link</a></p>
+            </div>
+        </div>
+    </div> 
+    
+
+   
+      ';
     }
 ?>
