@@ -6,7 +6,7 @@ while ($row = mysqli_fetch_assoc($urun_card)) {
 
     echo '
 
-    <div class="col s12 m6 l4">
+    <div class="col s12 m4 l3">
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="'.$row['resim'].'">

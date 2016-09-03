@@ -9,17 +9,15 @@
 </head>
 <body>
 
-    <div class="container">
-    <div class="row">
+
+    <div class="row" style="background-color: rgba(64,84,178,1)">
         <?php include 'header.php'; ?>
     <?php include 'slider.php'; ?>
-
     <?php include 'urunler.php'; ?>
-
 </div>
    <?php include 'footer.php' ?>
 
-</div>
+
 
 
 </body>
